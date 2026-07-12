@@ -129,7 +129,24 @@ h2.section-title{font-size:clamp(32px,4.5vw,52px);font-weight:600;margin-bottom:
 .orb-ring.r2{inset:24px;border-color:rgba(139,107,255,.25);animation-duration:22s;animation-direction:reverse;}
 @keyframes spin{to{transform:rotate(360deg);}}
 .orb-photo{position:absolute;inset:38px;border-radius:50%;background:linear-gradient(160deg,var(--panel-2),var(--panel));border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 0 80px rgba(62,242,192,.15);}
-.orb-photo .initials{font-family:'Space Grotesk',sans-serif;font-size:64px;font-weight:700;color:var(--root);opacity:.85;}
+.orb-photo{
+    position:absolute;
+    inset:38px;
+    border-radius:50%;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#111;
+}
+
+.profile-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center 18%;
+    border-radius:50%;
+}
 .orb-tag{position:absolute;padding:8px 14px;border-radius:100px;font-size:11px;font-family:'JetBrains Mono',monospace;white-space:nowrap;}
 .orb-tag.t1{top:6%;left:-10%;}
 .orb-tag.t2{bottom:10%;right:-14%;}
@@ -329,7 +346,9 @@ footer{padding:60px 0 30px;border-top:1px solid var(--line);position:relative;z-
       <div class="orb-wrap">
         <div class="orb-ring"></div>
         <div class="orb-ring r2"></div>
-        <div class="orb-photo"><div class="initials"><img src="97.jpeg" alt="Jora Tulsi Jayeshbhai"></div></div>
+        <div class="orb-photo">
+    <img src="97.jpeg" alt="Jora Tulsi Jayeshbhai" class="profile-img">
+</div>
         <div class="orb-tag glass t1 mono">Django</div>
         <div class="orb-tag glass t2 mono">ASP.NET</div>
         <div class="orb-tag glass t3 mono">n8n · AI</div>
